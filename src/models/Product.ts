@@ -11,11 +11,12 @@ class Product {
     }
 
     // methods
-    displayDetails(){
-
+    displayDetails(): string{
+        return `Product Details | Sku: ${this.sku}, Product Name: ${this.name}, Price: $${this.price}`
     }
 
-    getPriceWithTax(){
-
+    getPriceWithTax(): number{
+        const finalPrice = this.price * .06;
+        return finalPrice;
     }
 }
