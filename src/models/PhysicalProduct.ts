@@ -1,5 +1,5 @@
 // importing product class from Product.ts
-import Product from "./Product.ts";
+import Product from "./Product.js";
 
 export class PhysicalProduct extends Product {
     protected weight: number;
@@ -20,5 +20,3 @@ export class PhysicalProduct extends Product {
 
 
 }
-
-//console.log(PhysicalProduct())
