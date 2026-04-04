@@ -1,7 +1,7 @@
 
 import Product from "./Product"
 
-export class DigitalProduct extends Product {
+export default class DigitalProduct extends Product {
     protected fileSize: number;
 
     constructor(sku: string, name: string, price: number, fileSize: number) {
