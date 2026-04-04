@@ -1,22 +1,26 @@
 //base class for a product-----------------------------------------------
-class Product {
-    sku: string;
-    name: string;
-    price: number;
+export default class Product {
+    protected sku: string;
+    protected name: string;
+    protected price: number;
 
-    constructor(sku: string, name: string, price: number){
+    constructor(sku: string, name: string, price: number) {
         this.sku = sku;
         this.name = name;
         this.price = price;
     }
 
     // methods
-    displayDetails(): string{
-        return `Product Details | Sku: ${this.sku}, Product Name: ${this.name}, Price: $${this.price}`
+    displayDetails(): string {
+        return `Product Details | SKU: ${this.sku}, Name: ${this.name}, Price: $${this.price.toFixed(2)}` // made toFixed to format only 2 decinal places
     }
 
-    getPriceWithTax(): number{
-        const finalPrice = this.price * .06;
-        return finalPrice;
+    protected getTaxRate(): number {
+        return 0.06; // default tax
+    }
+
+    getPriceWithTax(): number {
+        // tax can be polymorphic
+        return this.price * 1.06;
     }
 }
