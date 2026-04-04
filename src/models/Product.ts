@@ -21,6 +21,7 @@ export default class Product {
 
     getPriceWithTax(): number {
         // tax can be polymorphic
-        return this.price * 1.06;
+        const total = this.price * 1.06;
+        return parseFloat(total.toFixed(2)); //toFixed turns the num into a string, had to use parseFloat to turn it back into a floating num
     }
 }
