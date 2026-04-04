@@ -11,10 +11,11 @@ const inventory: Product[] = [dellLaptop, eBook];
 
 //functions---------------------------------
 function looper(arr: Product[]) {
-    for (let i = 0; i < arr.length; i++)
-        console.log(arr[i].displayDetails());
-        console.log(`Final Price: ${arr[i].getPriceWithTax()}`);
-       
+     arr.forEach(product => {
+        console.log(product.displayDetails());
+        console.log(`Final Price: $${product.getPriceWithTax()}`);
+    });
+
 }
 
-looper(inventory);
+//looper(inventory);
