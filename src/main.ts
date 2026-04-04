@@ -1,6 +1,6 @@
-import PhysicalProduct from "./models/PhysicalProduct.js";
-import DigitalProduct from "./models/DigitalProduct.js";
-import Product from "./models/Product.js";
+import PhysicalProduct from "./models/PhysicalProduct";
+import DigitalProduct from "./models/DigitalProduct";
+import Product from "./models/Product";
 
 
 //instances
@@ -13,7 +13,7 @@ const inventory: Product[] = [dellLaptop, eBook];
 function looper(arr: Product[]) {
     for (let i = 0; i < arr.length; i++)
         console.log(arr[i].displayDetails());
-        console.log("Final Price:", arr[i].getPriceWithTax());
+        console.log(`Final Price: ${arr[i].getPriceWithTax()}`);
        
 }
 

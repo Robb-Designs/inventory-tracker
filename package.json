@@ -4,7 +4,7 @@
   "description": "This project is an inventory tracker app.",
   "license": "ISC",
   "author": "Robert Lee",
-  "type": "commonjs",
+  "type": "module",
   "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
